@@ -15,7 +15,7 @@
 		"php": ">=5.3.2"
 	},
 	"autoload": {
-		"psr-0": { "Vela\\Bundle\IconsBundle": "" }
+		"psr-0": { "Vela\\Bundle\\IconsBundle": "" }
 	},
 	"target-dir" : "Vela/Bundle/IconsBundle"
 }
