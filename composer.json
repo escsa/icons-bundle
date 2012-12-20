@@ -7,8 +7,10 @@
 	"license": "ESC S.A.",
 	"authors": [
 		{
-			"name": "Daniel Bojdo Web-IT",
-			"homepage": "http://vela.net.pl"
+			"name": "Daniel Bojdo",
+			"homepage": "http://vela.net.pl",
+			"email": "daniel.bojdo@escsa.pl",
+			"role": "Team Leader"
 		}
 	],
 	"require": {
