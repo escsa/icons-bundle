@@ -1,0 +1,7 @@
+parameters:
+#    vela_icons.example.class: Vela\Bundle\IconsBundle\Example
+
+services:
+#    vela_icons.example:
+#        class: %vela_icons.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,21 @@
+{
+	"name" : "vela/icons-bundle",
+	"type": "library",
+	"description": "Icons Bundle",
+	"keywords": ["escsa","vela","icons"],
+	"homepage": "http://vela.net.pl",
+	"license": "ESC S.A.",
+	"authors": [
+		{
+			"name": "Daniel Bojdo Web-IT",
+			"homepage": "http://vela.net.pl"
+		}
+	],
+	"require": {
+		"php": ">=5.3.2"
+	},
+	"autoload": {
+		"psr-0": { "Vela\\Bundle\IconsBundle": "" }
+	},
+	"target-dir" : "Vela/Bundle/IconsBundle"
+}
