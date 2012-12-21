@@ -28,14 +28,15 @@ class Generator extends ContainerAware {
 			foreach($fi as $file) {
 				foreach($arPatterns as $i=>$pattern) {
 					if($pattern == '*' || preg_match('/' .$pattern. '/', $file->getFilename())) {
-						$cls = $file->getBasename('.png');
-						$line = sprintf(".%s-%s { background-image: url('../../%s/%s') !important }",$setConfig->getIconSetPrefix(),$cls,$setConfig->getIconSetPath(),$file->getFilename());
+						$cls = $file->getBasename($setConfig->getFormat() ? ('.'.$setConfig->getFormat()) : '');
+						$src = $setConfig->getIconSetDocumentRoot() .'/'. $setConfig->getIconSetPath() . '/' .$file->getFilename();
+						$src = preg_replace('#//#','/',$src);
+						$line = sprintf(".%s-%s { background-image: url('%s') !important }",$setConfig->getIconSetPrefix(),$cls,$src);
 						$arResultFiles[$outputFilename][] = $line;
 					}
 				}
 			}
-	
-			
+				
 			$outputDir = $dir = $config->getBasePath() . '/css';
 			@mkdir($dir,0755,true);
 			if(!is_dir($dir)) {
@@ -44,8 +45,8 @@ class Generator extends ContainerAware {
 			
 			foreach($arResultFiles as $filename=>$arStack) {
 				sort($arStack);
-				$result = $dir . ($config->getCustom() ? '/custom/' : '/buildin/') . $outputFilename;
-				file_put_contents($result, implode("\n",$arStack));
+				$result = $dir . '/' . $outputFilename;
+				file_put_contents($result, implode("\n",$arStack)."\n");
 			}
 		}
 	}

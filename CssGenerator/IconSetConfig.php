@@ -28,6 +28,20 @@ class IconSetConfig {
 	 * @var string
 	 * @JMS\Type("string")
 	 */
+	protected $format = 'png';
+	
+	/**
+	 * 
+	 * @var string
+	 * @JMS\Type("string")
+	 */
+	protected $iconSetDocumentRoot = '../../';
+	
+	/**
+	 * 
+	 * @var string
+	 * @JMS\Type("string")
+	 */
 	protected $outputFilename;
 
 	/**
@@ -36,6 +50,10 @@ class IconSetConfig {
 	 */
 	public function getIconSetPath() {
 		return $this->iconSetPath;
+	}
+	
+	public function getFormat() {
+		return $this->format;
 	}
 	
 	/**
@@ -53,6 +71,10 @@ class IconSetConfig {
 		return $this->iconSetPrefix;
 	}
 
+	public function getIconSetDocumentRoot() {
+		return $this->iconSetDocumentRoot;
+	}
+	
 	/**
 	 * 
 	 * @return string
