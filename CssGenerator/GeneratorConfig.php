@@ -11,13 +11,6 @@ class GeneratorConfig {
 	protected $basePath;
 
 	/**
-	 * 
-	 * @var bool
-	 * @JMS\Type("boolean")
-	 */
-	protected $custom = true;
-
-	/**
    * @var array<Vela\Bundle\IconsBundle\CssGenerator\IconSetConfig>
    * @JMS\Type("array<Vela\Bundle\IconsBundle\CssGenerator\IconSetConfig>")
 	 */
@@ -29,14 +22,6 @@ class GeneratorConfig {
 
 	public function setBasePath($basePath) {
 		$this->basePath = realpath($basePath);
-	}
-
-	public function getCustom() {
-		return $this->custom;
-	}
-
-	public function setCustom($custom) {
-		$this->custom = $custom;
 	}
 
 	public function getSets() {
